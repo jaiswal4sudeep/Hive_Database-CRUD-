@@ -95,10 +95,22 @@ class _HomePageState extends State<HomePage> {
             return ListView.builder(
                 itemCount: items.length,
                 itemBuilder: (context, index) {
-                  return Card(
-                    child: ListTile(
-                      title: Text(items[index].title.toString()),
-                      subtitle: Text(items[index].desc.toString()),
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 8.0,
+                      vertical: 4.0,
+                    ),
+                    child: Card(
+                      child: ListTile(
+                        title: Text(items[index].title.toString()),
+                        subtitle: Text(items[index].desc.toString()),
+                        trailing: IconButton(
+                          onPressed: () {
+                            box.deleteAt(index);
+                          },
+                          icon: const Icon(Icons.delete),
+                        ),
+                      ),
                     ),
                   );
                 });
