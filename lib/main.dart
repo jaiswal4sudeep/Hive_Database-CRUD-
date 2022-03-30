@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hive_database/home_page.dart';
-import 'package:hive_database/todo_model.dart';
+import 'package:hive_database/models/todo_model.dart';
+import 'package:hive_database/pages/home_page.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 Future<void> main() async {
